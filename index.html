@@ -3,9 +3,15 @@
 <head><title>Page d'accueil</title></head>
 <body>
   <h1>bienvenue sur mon site</h1>
+  <p id="date"></p>
   <footer>
         <p>Contact : contact@monsite.com</p>
   </footer>
 </body>
 </html>
-<!-- Version 1.0.0 -->
+<script>
+    const options = { weekday:'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date().toLocaleDateString('en-US', options);
+    document.getElementById("date").innerText = "Today is " + today;
+</script>
+<!-- Version 1.2.0 -->
